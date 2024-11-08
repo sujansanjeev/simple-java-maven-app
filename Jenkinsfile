@@ -20,10 +20,10 @@ pipeline {
             }
         }
 
-        stage('Docker Run') {
-            steps {
-                sh 'docker run -d -p 8081:8080 simple-java-app'  // Run the container
-            }
-        }
+        // stage('Docker Run') {
+        //     steps {
+        //         sh 'docker run -d -p 8081:8080 simple-java-app'  // Run the container
+        //     }
+        // }
     }
 }
