@@ -1,5 +1,5 @@
 # Start with an official Maven image to build the application
-FROM maven:3.8.4-openjdk-11 AS build
+FROM maven:3.9.9-openjdk-17 AS build
 
 # Set the working directory in the container
 WORKDIR /SIMPLE-JAVA-MAVEN-APP
@@ -15,7 +15,7 @@ COPY src ./src
 RUN mvn clean package
 
 # Start a new image with JDK to run the application
-FROM openjdk:11-jre-slim
+FROM openjdk:17-jre-slim
 
 # Set the working directory in the new container
 WORKDIR /app
