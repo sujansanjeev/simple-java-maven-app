@@ -22,7 +22,7 @@ pipeline {
 
         stage('Docker Run') {
             steps {
-                sh 'docker run -d -p 8080:8081 simple-java-app'  // Run the container
+                sh 'docker run -d -p 8081:8080 simple-java-app'  // Run the container
             }
         }
     }
